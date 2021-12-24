@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const TopBar = () => {
   return (
     <Wrapper>
-      <StaticImage src="../images/logo.png" alt="Able Aura" />
+      <StaticImage src="../assets/images/logo.png" alt="Able Aura" />
     </Wrapper>
   );
 };

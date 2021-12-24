@@ -1,6 +1,7 @@
-export default {
+const theme = {
   fonts: {
-    main: "Muli, sans-serif",
+    html: "sans-serif",
+    body: "sf-pro-text-medium",
     code: "Roboto Mono",
   },
   colors: {
@@ -15,9 +16,9 @@ export default {
     redDark: "#bb2525",
     redLight: "#e66b6b",
 
-    grey: "#cecfd1",
+    grey: "#D1D9E6 ",
 
-    black: "#25273c",
+    black: "#35283C",
     white: "#fff",
   },
   breackpoins: {
@@ -27,7 +28,12 @@ export default {
   shadows: {
     light: "0 5px 15px rgba(0, 0, 0, 0.1)",
     dark: "0 5px 15px rgba(0, 0, 0, 0.2)",
+    button: "1px 12px 8px -7px rgb(0 0 0 / 22%)",
+    soft: "6px 6px 12px #b8b9be, -6px -6px 12px #ffffff ",
+    inset: "inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff",
     primary:
       "-1px -10px 14px -6px #FFFFFF, 5px 10px 12px -5px rgba(0, 0, 0, 0.19)",
   },
 };
+
+export default theme;

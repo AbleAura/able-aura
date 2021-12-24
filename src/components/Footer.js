@@ -7,12 +7,13 @@ const Footer = () => {
     <Wrapper>
       <div className="logo-box">
         <StaticImage
-          src="../images/logo.png"
+          src="../assets/images/logo.png"
           alt="Able Aura"
           className="logo"
         />
       </div>
-      Read our <a href="#">Privacy Policy</a>. Copyright Ableaura 2021.
+      Read our <a href="#">Privacy Policy</a>. Copyright &copy; Ableaura{" "}
+      {new Date().getFullYear()}.
     </Wrapper>
   );
 };

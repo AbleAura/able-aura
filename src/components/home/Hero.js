@@ -6,9 +6,10 @@ const Hero = () => {
   return (
     <Wrapper>
       <StaticImage
-        src="../../images/home/phones.png"
+        src="../../assets/images/mob.png"
         alt="A PWD ECOSYSTEM"
         className="hero-img"
+        layout="constrained"
       />
       <div>
         <h1>A PWD ECOSYSTEM</h1>
@@ -28,10 +29,15 @@ const Wrapper = styled.div`
   align-items: center;
   text-align: center;
   h1 {
+    width: 12rem;
+    letter-spacing: 0.3rem;
   }
 
   .hero-img {
-    height: 100%;
+    width: 35%;
+    @media screen and (min-width: 992px) {
+      width: 25%;
+    }
   }
   .container {
   }
