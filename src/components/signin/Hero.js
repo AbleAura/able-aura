@@ -7,7 +7,7 @@ const Hero = () => {
     <Wrapper>
       <div className="left">
         <StaticImage
-          src="../../images/hands.png"
+          src="../../images/signin/hands.png"
           alt="Friends"
           className="image"
         />

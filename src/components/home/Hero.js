@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <StaticImage
-        src="../images/hero-sample.png"
+        src="../../images/home/phones.png"
         alt="A PWD ECOSYSTEM"
         className="hero-img"
       />
