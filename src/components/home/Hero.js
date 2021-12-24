@@ -11,9 +11,9 @@ const Hero = () => {
         className="hero-img"
         layout="constrained"
       />
-      <div>
+      <div className="right">
         <h1>A PWD ECOSYSTEM</h1>
-        <h2>an app. a forum. a lifestyle</h2>
+        <h3>an app. a forum. a lifestyle</h3>
       </div>
     </Wrapper>
   );
@@ -22,23 +22,50 @@ const Hero = () => {
 export default Hero;
 
 const Wrapper = styled.div`
+  margin-top: 109px;
   background-color: ${(props) => props.theme.colors.white};
   height: 70vh;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
   h1 {
-    width: 12rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 1.5;
+    font-size: 45px;
+    font-family: sf-pro-text-bold;
+  }
+
+  h3 {
+    font-size: 22px;
   }
 
   .hero-img {
-    width: 35%;
-    @media screen and (min-width: 992px) {
-      width: 25%;
+    width: 45%;
+  }
+
+  @media screen and (min-width: 767px) {
+    flex-direction: row;
+    h1 {
+      font-size: 50px;
+    }
+    h3 {
+      font-size: 30px;
+    }
+
+    .hero-img {
+      width: 35%;
+    }
+    .right {
+      max-width: 28rem;
     }
   }
-  .container {
+  @media screen and (min-width: 1500px) {
+    h1 {
+      font-size: 68px;
+    }
+    .hero-img {
+      width: 25%;
+    }
   }
 `;

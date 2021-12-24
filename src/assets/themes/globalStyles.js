@@ -1,11 +1,20 @@
 import { createGlobalStyle } from "styled-components";
+import SfProTextMedium from "../fonts/sf-pro-text-medium.ttf";
+import SfProTextSemibold from "../fonts/sf-pro-text-semibold.ttf";
+import SfProTextBold from "../fonts/sf-pro-text-bold.ttf";
 
 const GlobalStyle = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
-
 @font-face {
   font-family: sf-pro-text-medium;
-  src: url("../assets/fonts/sf-pro-text-medium.ttf");
+  src: url(${SfProTextMedium}) format('truetype');
+}
+@font-face {
+  font-family: sf-pro-text-semibold;
+  src: url(${SfProTextSemibold}) format('truetype');
+}
+@font-face {
+  font-family: sf-pro-text-bold;
+  src: url(${SfProTextBold}) format('truetype');
 }
 
   *,
@@ -42,14 +51,46 @@ line-height: 1.5;
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
+    line-height: 1.3;
     margin-bottom: 0.5rem;
-    
+    color: ${(props) => props.theme.colors.black};
+    font-family: sf-pro-text-semibold;
+    font-weight: 400;
+}
+
+ h2 {
+    font-size: 32px;
+    letter-spacing: 1.5px;
+  }
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+ol li, p, ul li {
+    font-family: sf-pro-text-regular;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: .7px;
 }
 
 p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
+
+ @media screen and (min-width: 992px) {
+    h2 {
+      font-size: 36px;
+    }
+  }
 `;
 
 export default GlobalStyle;
