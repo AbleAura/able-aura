@@ -17,6 +17,14 @@ const GlobalStyle = createGlobalStyle`
   src: url(${SfProTextBold}) format('truetype');
 }
 
+  --transition: all 0.3s linear;
+  --spacing: 0.2rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 700px;
+
   *,
 ::after,
 ::before {
@@ -84,6 +92,27 @@ ol li, p, ul li {
 p {
     margin-top: 0;
     margin-bottom: 1rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  background: ${(props) => props.theme.colors.black};
+  color: ${(props) => props.theme.colors.primary9};
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+.btn:hover {
+  color: ${(props) => props.theme.colors.primary1};
+  background: ${(props) => props.theme.colors.primary8};
 }
 
  @media screen and (min-width: 992px) {
