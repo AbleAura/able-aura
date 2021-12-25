@@ -5,38 +5,40 @@ import { StaticImage } from "gatsby-plugin-image";
 const BecomeInsider = () => {
   return (
     <Wrapper>
-      <h2 className="desktop">JOIN US, IN CHANGING THE FUTURE</h2>
-      <h2 className="mobile">
-        JOIN US
-        <br />
-        <span className="in-change">IN CHANGE THE FUTURE</span>
-      </h2>
-      <p className="text">
-        Become an insider, win trips & access exclusive early memberdiscounts.
-      </p>
-      <form className="form">
-        <div class="input-group">
-          <input
-            id="email"
-            name="email"
-            className="form-control"
-            placeholder="example@ableaura.com"
-            required
-          />
-          <div className="container-join-btn">
-            <button id="btn-join" className="btn-join">
-              <StaticImage
-                src="../../assets/images/hand-white-01.png"
-                alt="hand"
-                layout="fixed"
-                width={20}
-                height={20}
-              />
-              <span className="text">Join</span>
-            </button>
+      <div className="container">
+        <h2 className="desktop">JOIN US, IN CHANGING THE FUTURE</h2>
+        <h2 className="mobile">
+          JOIN US
+          <br />
+          <span className="in-change">IN CHANGE THE FUTURE</span>
+        </h2>
+        <p className="text">
+          Become an insider, win trips & access exclusive early memberdiscounts.
+        </p>
+        <form className="form">
+          <div class="input-group">
+            <input
+              id="email"
+              name="email"
+              className="form-control"
+              placeholder="example@ableaura.com"
+              required
+            />
+            <div className="container-join-btn">
+              <button id="btn-join" className="btn-join">
+                <StaticImage
+                  src="../../assets/images/hand-white-01.png"
+                  alt="hand"
+                  layout="fixed"
+                  width={20}
+                  height={20}
+                />
+                <span className="text">Join</span>
+              </button>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </Wrapper>
   );
 };

@@ -115,11 +115,36 @@ p {
   background: ${(props) => props.theme.colors.primary8};
 }
 
- @media screen and (min-width: 992px) {
-    h2 {
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+@media (min-width: 1200px)
+.container {
+    max-width: 1140px;
+}
+@media (min-width: 992px)
+h2 {
       font-size: 36px;
     }
-  }
+.container {
+    max-width: 960px;
+}
+@media (min-width: 768px)
+.container {
+    max-width: 720px;
+}
+@media (min-width: 576px)
+.container {
+    max-width: 540px;
+}
+
 `;
 
 export default GlobalStyle;

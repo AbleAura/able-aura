@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Hero from "../components/signin/Hero";
+import InviteFriends from "../components/signin/InviteFriends";
 
 const Signin = () => {
   return (
     <Layout>
-      <Hero />
+      <InviteFriends />
     </Layout>
   );
 };

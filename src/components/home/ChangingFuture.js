@@ -5,20 +5,22 @@ import { StaticImage } from "gatsby-plugin-image";
 const ChangingFuture = () => {
   return (
     <Wrapper>
-      <h2>CHANGING THE FUTURE, NOW</h2>
+      <div className="container">
+        <h2>CHANGING THE FUTURE, NOW</h2>
 
-      <div class="blocks">
-        {items.map((item, index) => {
-          return (
-            <div key={index} className="block">
-              <div className="block-body">
-                <div className="image-container">{item.image}</div>
-                <h3 className="title">{item.title}</h3>
-                <p className="text">{item.text}</p>
+        <div class="blocks">
+          {items.map((item, index) => {
+            return (
+              <div key={index} className="block">
+                <div className="block-body">
+                  <div className="image-container">{item.image}</div>
+                  <h3 className="title">{item.title}</h3>
+                  <p className="text">{item.text}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </Wrapper>
   );
@@ -26,7 +28,7 @@ const ChangingFuture = () => {
 
 export default ChangingFuture;
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   padding: 2rem 0;
 
   h2 {
@@ -91,7 +93,7 @@ const Wrapper = styled.div`
 const items = [
   {
     title: "Services",
-    text: "Healthcare, sports, travel, education and many more, everrything you need, want of hope for.",
+    text: "Healthcare, sports, travel, education and many more, everything you need, want or hope for.",
     image: (
       <StaticImage
         src="../../assets/images/service.png"
@@ -103,7 +105,7 @@ const items = [
   },
   {
     title: "Products",
-    text: "Buy, Sell of Repair accessible devices. Products that make your life easier than ever before.",
+    text: "Buy, Sell or Repair accessible devices. Products that make your life easier than ever before.",
     image: (
       <StaticImage
         src="../../assets/images/product.png"
