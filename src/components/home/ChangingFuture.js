@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
 import items from "../../constants/home/ChanginFutureItems";
-import InviteFriends from "../signin/InviteFriends";
 
 const ChangingFuture = () => {
   return (
@@ -26,7 +24,6 @@ const ChangingFuture = () => {
           </div>
         </div>
       </Wrapper>
-      <InviteFriends />
     </>
   );
 };
@@ -45,12 +42,12 @@ const Wrapper = styled.section`
     padding: 2rem;
   }
   .block {
-    border: 0.0625rem solid ${(props) => props.theme.colors.grey};
+    border: 0.0625rem solid ${(props) => props.theme.colors.gray400};
     border-radius: 0.55rem;
     box-shadow: ${(props) => props.theme.shadows.soft};
     margin-bottom: 1.5rem;
     transition: all 0.3s;
-    background-color: ${(props) => props.theme.colors.primary11};
+    background-color: ${(props) => props.theme.colors.background1};
     display: flex;
     flex-direction: column;
     min-width: 0;

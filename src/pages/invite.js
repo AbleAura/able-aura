@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import InviteFriends from "../components/signin/InviteFriends";
+import InviteFriends from "../components/invite/InviteFriends";
 
 const Signin = () => {
   return (

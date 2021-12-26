@@ -25,7 +25,7 @@ const BecomeInsider = () => {
               required
             />
             <div className="container-join-btn">
-              <button id="btn-join" className="btn-join">
+              <button id="btn-join" className="btn btn-join">
                 <StaticImage
                   src="../../assets/images/hand-white-01.png"
                   alt="hand"
@@ -48,81 +48,63 @@ export default BecomeInsider;
 const Wrapper = styled.div`
   padding: 2rem;
   text-align: center;
-  
 
-  .desktop {display: none;}
+  .desktop {
+    display: none;
+  }
 
-  .in-change {font-size: 19px}
+  .in-change {
+    font-size: 19px;
+  }
   .form {
     padding: 0 2rem;
-    
   }
   .input-group {
-    transition: all 0.2s ease;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    width: 350px;
+    margin: auto;
   }
 
   .form-control {
-    background-color; ${(props) => props.theme.colors.redDark};
-    width: 80vw;
-    max-width: 650px;
     height: calc(2.25em + 1.75rem + 0.0625rem);
     padding: 0.875rem 1rem;
-    line-height: 1.5;
     font-size: 1.25rem;
-    border-radius: 0.3rem;
-    box-shadow: ${(props) => props.theme.shadows.inset};
-    display: block;
-    font-weight: 300;
-    color: ${(props) => props.theme.colors.black};
-        background-clip: padding-box;
-    border: 0.0625rem solid ${(props) => props.theme.colors.grey};
-    transition: all 0.3s ease-in-out;
-    overflow: visible;
-    :focus {outline: none;}
+    margin-bottom: 1rem;
   }
 
   .container-join-btn {
     width: 221px;
     height: 68px;
-    background: ${(props) => props.theme.colors.primary9};
+    background: ${(props) => props.theme.colors.background1};
     box-shadow: ${(props) => props.theme.shadows.inset};
     border-radius: 10px;
-    border: 1px solid ${(props) => props.theme.colors.primary9};
+    border: 1px solid ${(props) => props.theme.colors.background1};
     padding: 10px;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     :hover {
       border: 1px solid ${(props) => props.theme.colors.black};
-      box-shadow:  ${(props) => props.theme.shadows.inset2};
+      box-shadow: ${(props) => props.theme.shadows.inset2};
     }
   }
 
   .btn-join {
     display: flex;
     justify-content: center;
-    
+
     width: 200px;
     height: 48px;
     background: ${(props) => props.theme.colors.black};
-    box-shadow:  ${(props) => props.theme.shadows.button};
+    box-shadow: ${(props) => props.theme.shadows.button};
     border-radius: 7px;
-    font-family: 'sf-pro-text-bold';
+    font-family: "sf-pro-text-bold";
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.05em;
-    color: ${(props) => props.theme.colors.primary9};
+    color: ${(props) => props.theme.colors.background1};
     text-transform: uppercase;
     padding: 12px 0;
 
     position: relative;
-   
-    
   }
 
   .text {
@@ -130,14 +112,14 @@ const Wrapper = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    
     .desktop {
       display: block;
     }
     .mobile {
       display: none;
     }
+    .input-group {
+      widht: 450px;
+    }
   }
-
-   
 `;

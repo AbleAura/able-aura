@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+import InviteFriendsForm from "./InviteFriendsForm";
 
 const Hero = () => {
   return (
@@ -16,6 +17,7 @@ const Hero = () => {
         <div className="right">
           <p>DONT LEAVE YOUR FRIENDS BEHIND</p>
           <h2>INVITE FIRENDS & EARN PRODUCT</h2>
+          <InviteFriendsForm />
         </div>
       </div>
     </Wrapper>
@@ -46,6 +48,9 @@ const Wrapper = styled.section`
     text-align: center;
     p {
       margin-bottom: 1rem;
+    }
+    h2 {
+      max-width: 410px;
     }
   }
 

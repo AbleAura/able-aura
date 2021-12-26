@@ -17,8 +17,11 @@ const Footer = () => {
       </Link>
 
       <p>
-        Read our <Link to="/privacy-policy">Privacy Policy</Link>. Copyright
-        &copy; Ableaura {new Date().getFullYear()}.
+        Read our{" "}
+        <Link className="aa-pl-link" to="/privacy-policy">
+          Privacy Policy
+        </Link>
+        . Copyright &copy; Ableaura {new Date().getFullYear()}.
       </p>
     </Wrapper>
   );

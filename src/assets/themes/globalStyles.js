@@ -53,8 +53,8 @@ body{
     line-height: 1.5;
     color: ${(props) => props.theme.colors.black};
     text-align: left;
-    background-color: ${(props) => props.theme.colors.primary9};
-line-height: 1.5;
+    background-color: ${(props) => props.theme.colors.background1};
+    line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -94,25 +94,53 @@ p {
     margin-bottom: 1rem;
 }
 
+a,
+a:hover {
+  text-decoration: none;
+}
+a:hover {
+  color: #262833;
+}
+
+.aa-pl-link {
+  color: #0071e3;
+}
 .btn {
-  text-transform: uppercase;
-  background: ${(props) => props.theme.colors.black};
-  color: ${(props) => props.theme.colors.primary9};
-  padding: 0.375rem 0.75rem;
-  letter-spacing: var(--spacing);
   display: inline-block;
-  font-weight: 700;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  font-size: 0.875rem;
-  border: 2px solid transparent;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
+  font-weight: 400;
+  color: ${(props) => props.theme.colors.primary};
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 0.0625rem solid transparent;
+  padding: 0.55rem 0.95rem;
+  line-height: 1.5;
+  border-radius: 0.55rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .btn:hover {
   color: ${(props) => props.theme.colors.primary1};
   background: ${(props) => props.theme.colors.primary8};
+}
+
+.btn-extradark {
+  width: 200px;
+  height: 48px;
+  background: ${(props) => props.theme.colors.black};
+  box-shadow: 1px 12px 8px -7px rgb(0 0 0 / 22%) !important;
+  border-radius: 7px;
+  font-family: "sf-pro-text-bold";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: ${(props) => props.theme.colors.white2};
+  text-transform: uppercase;
+  padding: 12px 0;
 }
 
 .container {
@@ -121,29 +149,100 @@ p {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    
 }
 
+.input-group {
+  width: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.2s ease;
+  }
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 1.2625rem);
+  padding: 0.6rem 0.75rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: ${(props) => props.theme.colors.gray};
+  background-color: ${(props) => props.theme.colors.white};
+  background-clip: padding-box;
+  border: 0.0625rem solid ${(props) => props.theme.colors.gray400};
+  border-radius: 0.3rem;
+  box-shadow: ${(props) => props.theme.shadows.inset};
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.form-control:focus {
+  color: ${(props) => props.theme.colors.gray};;
+  background-color: #e6e7ee;
+  border-color: #d1d9e6;
+  outline: 0;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff, none;
+}
+
+.form-control::-moz-placeholder {
+  color: #44476a;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #44476a;
+  opacity: 1;
+}
+.form-control::placeholder {
+  color: #44476a;
+  opacity: 1;
+}
+.form-control:disabled,
+.form-control[readonly] {
+  opacity: 1;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+}
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.form-row > .col,
+.form-row > [class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
 
 
 @media (min-width: 1200px)
-.container {
-    max-width: 1140px;
-}
+.container { max-width: 1140px;}
+
 @media (min-width: 992px)
-h2 {
-      font-size: 36px;
-    }
-.container {
-    max-width: 960px;
-}
+h2 {  font-size: 36px;}
+.container { max-width: 960px;}
+
 @media (min-width: 768px)
-.container {
-    max-width: 720px;
-}
+.container { max-width: 720px;}
+
 @media (min-width: 576px)
-.container {
-    max-width: 540px;
-}
+.container { max-width: 540px;}
 
 `;
 

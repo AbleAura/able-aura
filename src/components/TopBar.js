@@ -22,7 +22,7 @@ export default TopBar;
 
 const Wrapper = styled.div`
   z-index: 100;
-  background-color: ${(props) => props.theme.colors.primary9};
+  background-color: ${(props) => props.theme.colors.white2};
   width: 100%;
   height: 109px;
   display: flex;
@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   top: 0;
 
   .able-topbar {
-    background-color: ${(props) => props.theme.colors.grey1};
+    background-color: ${(props) => props.theme.colors.gray1};
     width: 100vw;
     text-align: center;
 

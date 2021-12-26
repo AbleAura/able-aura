@@ -5,23 +5,17 @@ const theme = {
     code: "Roboto Mono",
   },
   colors: {
-    primary1: "rgb(0, 37, 92)",
-    primary5: "#2892d7",
-
-    primary8: "rgb(199, 226, 222)",
-    primary9: "#e6f4f1;",
-    primary10: "#eefbff",
-    primary11: "#eefbff",
-
-    greenDark: "#1d9527",
-    redDark: "#bb2525",
-    redLight: "#e66b6b",
-
-    grey: "hsl(209, 61%, 16%) ",
-    grey1: "#0b5780",
-
-    white: "#35283C",
-    black: "#fff",
+    primary1: "#c7c9c9",
+    primary: "#282829",
+    primary8: "#484949",
+    black: "#e5e3eb",
+    white: "#5c5e60",
+    white2: "#616263",
+    gray: "#767da8",
+    gray1: "#dee1e1",
+    gray400: "#d1d9e6",
+    background1: "#545455",
+    red: "#a91e2c",
   },
   breackpoins: {
     mobile: "",
