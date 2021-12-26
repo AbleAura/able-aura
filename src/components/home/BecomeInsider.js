@@ -16,7 +16,7 @@ const BecomeInsider = () => {
           Become an insider, win trips & access exclusive early memberdiscounts.
         </p>
         <form className="form">
-          <div class="input-group">
+          <div className="input-group">
             <input
               id="email"
               name="email"

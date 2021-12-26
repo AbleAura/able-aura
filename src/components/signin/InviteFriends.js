@@ -26,7 +26,6 @@ export default Hero;
 
 const Wrapper = styled.section`
   padding: 2rem 0;
-
   box-shadow: ${(props) => props.theme.shadows.primary};
 
   .container {

@@ -24,7 +24,6 @@ const Hero = () => {
 export default Hero;
 
 const Wrapper = styled.section`
-  margin-top: 109px;
   background-color: ${(props) => props.theme.colors.white};
 
   .container {

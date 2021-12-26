@@ -21,17 +21,18 @@ const TopBar = () => {
 export default TopBar;
 
 const Wrapper = styled.div`
-  position: fixed;
   z-index: 100;
   background-color: ${(props) => props.theme.colors.primary9};
-  top: 0;
-  left: 0;
   width: 100%;
   height: 109px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: ${(props) => props.theme.shadows.primary};
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 
   .able-topbar {
     background-color: ${(props) => props.theme.colors.grey1};

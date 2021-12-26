@@ -1,28 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+import items from "../../constants/home/ChanginFutureItems";
+import InviteFriends from "../signin/InviteFriends";
 
 const ChangingFuture = () => {
   return (
-    <Wrapper>
-      <div className="container">
-        <h2>CHANGING THE FUTURE, NOW</h2>
+    <>
+      <Wrapper>
+        <div className="container">
+          <h2>CHANGING THE FUTURE, NOW</h2>
 
-        <div class="blocks">
-          {items.map((item, index) => {
-            return (
-              <div key={index} className="block">
-                <div className="block-body">
-                  <div className="image-container">{item.image}</div>
-                  <h3 className="title">{item.title}</h3>
-                  <p className="text">{item.text}</p>
+          <div className="blocks">
+            {items.map((item, index) => {
+              return (
+                <div key={index} className="block">
+                  <div className="block-body">
+                    <div className="image-container">{item.image}</div>
+                    <h3 className="title">{item.title}</h3>
+                    <p className="text">{item.text}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+      <InviteFriends />
+    </>
   );
 };
 
@@ -89,42 +94,3 @@ const Wrapper = styled.section`
     }
   }
 `;
-
-const items = [
-  {
-    title: "Services",
-    text: "Healthcare, sports, travel, education and many more, everything you need, want or hope for.",
-    image: (
-      <StaticImage
-        src="../../assets/images/service.png"
-        alt="service"
-        layout="constrained"
-        className="image"
-      />
-    ),
-  },
-  {
-    title: "Products",
-    text: "Buy, Sell or Repair accessible devices. Products that make your life easier than ever before.",
-    image: (
-      <StaticImage
-        src="../../assets/images/product.png"
-        alt="product"
-        layout="constrained"
-        className="image"
-      />
-    ),
-  },
-  {
-    title: "Community",
-    text: "Learn how to break barriers, get tips from high achievers, access information on life essentials.",
-    image: (
-      <StaticImage
-        src="../../assets/images/community.png"
-        alt="community"
-        layout="constrained"
-        className="image"
-      />
-    ),
-  },
-];

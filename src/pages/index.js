@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import Hero from "../components/home/Hero";
 import ChangingFuture from "../components/home/ChangingFuture";
 import BecomeInsider from "../components/home/BecomeInsider";
-import InviteFriends from "../components/signin/InviteFriends";
 
 const Index = () => {
   return (
@@ -17,7 +16,6 @@ const Index = () => {
         <Hero />
         <ChangingFuture />
         <BecomeInsider />
-        <InviteFriends />
       </main>
     </Layout>
   );
