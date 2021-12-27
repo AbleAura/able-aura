@@ -10,22 +10,14 @@ const InviteFriendsForm = () => {
           <input
             id="email"
             name="email"
-            className="form-control"
+            className="form-control text"
             placeholder="https://ableaura.com"
             required
           />
-          <div className="container-join-btn">
-            <button id="btn-join" className="btn-join">
-              <StaticImage
-                src="../../assets/images/hand-white-01.png"
-                alt="hand"
-                layout="fixed"
-                width={20}
-                height={20}
-              />
-              <span className="text">Join</span>
-            </button>
-          </div>
+
+          <button id="btn-copy" className="btn">
+            <span className="text">Copy</span>
+          </button>
         </div>
       </form>
     </Wrapper>
@@ -38,5 +30,20 @@ const Wrapper = styled.div`
   .input-group {
     flex-wrap: nowrap;
     flex-direction: row;
+  }
+
+  .text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 1;
+  }
+
+  .btn {
+    color: ${(props) => props.theme.colors.black};
+    border: 1px solid ${(props) => props.theme.colors.gray400};
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+    z-index: 2;
   }
 `;

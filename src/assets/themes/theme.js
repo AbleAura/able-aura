@@ -5,9 +5,10 @@ const theme = {
     code: "Roboto Mono",
   },
   colors: {
-    primary1: "#4f504f",
     primary: "#e6e7ee",
-    primary8: "#E5E5E5",
+    primary1: "#4f504f",
+    primary5: "#c4c4c4",
+    primary8: "#e5e5e5",
     black: "#262833",
     white: "#ecf0f3",
     white2: "#f3f3f5",
@@ -61,7 +62,6 @@ const theme = {
     slack: "#3aaf85",
 
     primary1: "#4f504f",
-    primary5: "##C4C4C4",
 
     primary9: "#F3F3F5",
     primary10: "#f4f4f7",

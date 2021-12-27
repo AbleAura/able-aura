@@ -16,8 +16,19 @@ const Hero = () => {
         </div>
         <div className="right">
           <p>DONT LEAVE YOUR FRIENDS BEHIND</p>
-          <h2>INVITE FIRENDS & EARN PRODUCT</h2>
+          <h2>INVITE FRIENDS & EARN PRODUCT</h2>
           <InviteFriendsForm />
+          <div className="social mt-4">
+            <StaticImage
+              src="../../assets/images/WhatsApp.png"
+              alt="Whatsapp"
+            />
+            |
+            <StaticImage
+              src="../../assets/images/Instagram.png"
+              alt="Instagram"
+            />
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -27,24 +38,19 @@ const Hero = () => {
 export default Hero;
 
 const Wrapper = styled.section`
-  padding: 2rem 0;
   box-shadow: ${(props) => props.theme.shadows.primary};
 
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
   }
   .left {
-    /* border: 1px solid ${(props) => props.theme.colors.primary1}; */
   }
   .image {
-    width: 50%;
-    margin: 0 20%;
+    width: 100%;
   }
   .right {
-    /* border: 1px solid ${(props) => props.theme.colors.primary2}; */
+    padding: 0 5rem;
     text-align: center;
     p {
       margin-bottom: 1rem;
@@ -57,6 +63,7 @@ const Wrapper = styled.section`
   @media screen and (min-width: 768px) {
     .container {
       flex-direction: row;
+      align-items: center;
     }
   }
 `;

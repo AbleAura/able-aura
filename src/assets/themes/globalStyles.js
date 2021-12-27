@@ -231,6 +231,17 @@ a:hover {
 }
 
 
+/* SHAPES */
+.rounded-circle { border-radius: 50%;}
+/* MARGINS */
+.mb-1 { margin-bottom: .25rem;}
+.mb-2 { margin-bottom: .5rem;}
+.mt-1 { margin-top: .25rem;}
+.mt-2 { margin-top: .5rem;}
+.mt-3 { margin-top: 1rem;}
+.mt-4 { margin-top: 1.5rem};
+
+
 @media (min-width: 1200px)
 .container { max-width: 1140px;}
 
