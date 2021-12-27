@@ -59,26 +59,27 @@ body{
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
-    line-height: 1.3;
     margin-bottom: 0.5rem;
+    line-height: 1.3;    
     color: ${(props) => props.theme.colors.black};
     font-family: sf-pro-text-semibold;
     font-weight: 400;
 }
 
+h1 {
+  font-size: 2.5rem;
+  @media (max-width: 1200px) {font-size: calc(1.375rem + 1.5vw);}
+}
+
  h2 {
-    font-size: 32px;
+    font-size: 2rem;
     letter-spacing: 1.5px;
+    @media (max-width: 1200px) {font-size: calc(1.325rem + 0.9vw);}
   }
 
 h3 {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+  font-size: 1.75rem;
+  @media (max-width: 1200px) {font-size: calc(1.3rem + 0.6vw);}
 }
 
 ol li, p, ul li {
@@ -149,6 +150,19 @@ a:hover {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+   
+    @media (min-width: 576px){
+      max-width: 540px;
+    }
+    @media (min-width: 768px){
+      max-width: 720px;
+    }
+    @media (min-width: 992px){
+      max-width: 960px;
+    }
+    @media (min-width: 1200px){
+      max-width: 1140px;
+    }
     
 }
 
@@ -236,24 +250,35 @@ a:hover {
 /* MARGINS */
 .mb-1 { margin-bottom: .25rem;}
 .mb-2 { margin-bottom: .5rem;}
+.mb-3 { margin-bottom: 1rem;}
+.mb-4 { margin-bottom: 1.5rem;}
+
 .mt-1 { margin-top: .25rem;}
 .mt-2 { margin-top: .5rem;}
 .mt-3 { margin-top: 1rem;}
 .mt-4 { margin-top: 1.5rem};
+.mt-5 { margin-top: 3rem};
+
+/* ALIGNS */
+.text-center {
+  text-align: center;
+}
 
 
-@media (min-width: 1200px)
-.container { max-width: 1140px;}
 
-@media (min-width: 992px)
-h2 {  font-size: 36px;}
-.container { max-width: 960px;}
-
-@media (min-width: 768px)
-.container { max-width: 720px;}
-
-@media (min-width: 576px)
-.container { max-width: 540px;}
+.able-lead {
+    text-align: justify;
+  }
+.able-lead,
+.list-style1 li {
+  font-size: 1.2rem;
+  @media (min-width: 576px){
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    line-height: 2;
+  }
+}
 
 `;
 
