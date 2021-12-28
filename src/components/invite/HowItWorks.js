@@ -7,6 +7,7 @@ const HowItWorks = () => {
     <Wrapper>
       <div className="container">
         <h3>HERE IS HOW IT WORKS</h3>
+
         <div className="friends mb-2">
           <div className="friends-1">FRIENDS JOINED</div>
           <div className="friends-2 steps">
@@ -27,7 +28,7 @@ const HowItWorks = () => {
         </div>
 
         <div className="gray-line" />
-        <div className="black-line" />
+        <div className="black-line" style={{ width: "20%" }} />
 
         <div className="friends steps mt-2">
           <div className="friends-1">HARRY'S PRODUCT</div>
@@ -123,7 +124,6 @@ const Wrapper = styled.section`
     border-color: ${(props) => props.theme.colors.gray400};
   }
   .black-line {
-    width: 20%;
     border: 5px solid ${(props) => props.theme.colors.gray2};
     margin-top: -10px;
   }

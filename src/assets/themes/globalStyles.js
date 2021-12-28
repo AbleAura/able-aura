@@ -264,7 +264,25 @@ a:hover {
   text-align: center;
 }
 
+.react-switch {margin-left: 3px;}
+.able-topbar {
 
+    background-color: ${(props) => props.theme.colors.gray1};
+    width: 100vw;
+    text-align: center;
+    z-index: 102;
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 18px !important;
+      letter-spacing: 1.5px;
+      color: ${(props) => props.theme.colors.white};
+      padding: 3px 0;
+      margin: 0;
+      width: 90%;
+    }
+  }
 
 .able-lead {
     text-align: justify;

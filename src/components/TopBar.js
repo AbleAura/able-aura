@@ -6,9 +6,6 @@ import { Link } from "gatsby";
 const TopBar = () => {
   return (
     <Wrapper>
-      <div className="able-topbar">
-        <p>Launching on April 2nd, 2022</p>
-      </div>
       <nav>
         <Link to="/">
           <StaticImage src="../assets/images/logo.png" alt="Able Aura" />
@@ -21,14 +18,14 @@ const TopBar = () => {
 export default TopBar;
 
 const Wrapper = styled.div`
-  z-index: 100;
+  z-index: 1;
   background-color: ${(props) => props.theme.colors.white2};
   width: 100%;
   height: 109px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: ${(props) => props.theme.shadows.primary};
+  box-shadow: ${(props) => props.theme.shadows.dark};
 
   position: -webkit-sticky; /* Safari */
   position: sticky;
