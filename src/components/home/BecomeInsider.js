@@ -15,7 +15,11 @@ const BecomeInsider = () => {
         <p className="text">
           Become an insider, win trips & access exclusive early memberdiscounts.
         </p>
-        <form className="form">
+        <form
+          className="form"
+          method="post"
+          action="https://api.ableaura.com/api/prelaunch/subscribe"
+        >
           <div className="input-group">
             <input
               id="email"
