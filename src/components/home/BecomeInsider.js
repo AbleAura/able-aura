@@ -1,29 +1,20 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import axios from "axios";
 
-export class BecomeInsider extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      values: {
-        email: "",
-      },
-      isSubmitting: false,
-      isError: false,
-      isSubmited: false,
-    };
-  }
+const BecomeInsider = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmited, setIsSubmited] = useState(false);
 
-  handleSubmit = async (e) => {
-    e.preventDefault();
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
     //Preparing for sending
     const qs = require("querystring");
 
     const postData = qs.stringify({
-      email: this.state.values.email,
+      email: email,
     });
 
     const headers = {
@@ -32,88 +23,79 @@ export class BecomeInsider extends Component {
       "Content-Length": postData.length,
     };
 
-    this.setState({ isSubmitting: true });
-    /** Envío a Hubspot */
+    setIsSubmitting(true);
+
     axios
       .post("https://api.ableaura.com/api/prelaunch/subscribe", postData, {
         headers: headers,
       })
       .then((res) => {
-        console.log("--- desde forma de De DateForm Áxio---");
+        console.log("--- from DateForm Áxios---");
 
         console.log(res);
         console.log(res.data);
       })
-      .catch((error) => console.log(error));
-
-    this.setState({ isSubmitting: false });
-    this.setState({ isSubmited: true });
+      .catch((error) => console.log("error: ", error));
+    setIsSubmitting(false);
+    setEmail("");
+    setIsSubmited(true);
   };
 
-  handleChange = (e) => {
-    this.setState({
-      values: { ...this.state.values, [e.target.name]: e.target.value },
-    });
-  };
-
-  render() {
-    return (
-      <Wrapper>
-        <div className="container">
-          <h2 className="desktop">JOIN US, IN CHANGING THE FUTURE</h2>
-          <h2 className="mobile">
-            JOIN US
-            <br />
-            <span className="in-change">IN CHANGE THE FUTURE</span>
-          </h2>
-          <p className="text">
-            Become an insider, win trips & access exclusive early
-            memberdiscounts.
-          </p>
-          <form onSubmit={this.handleSubmit} className="form">
-            <div className="input-group">
-              <input
-                onChange={this.handleChange}
-                defaultValue={this.state.values.email}
-                id="email"
-                name="email"
-                className="form-control"
-                placeholder="example@ableaura.com"
-                required
-              />
-              <div className="container-join-btn">
-                <button
-                  type="submit"
-                  disabled={this.state.isSubmited || this.state.isSubmitting}
-                  id="btn-join"
-                  className="btn btn-join"
-                  style={{
-                    backgroundColor: this.state.isSubmited ? "green" : "black",
-                  }}
-                >
-                  <StaticImage
-                    src="../../assets/images/hand-white-01.png"
-                    alt="hand"
-                    layout="fixed"
-                    width={20}
-                    height={20}
-                  />
-                  <span className="text">
-                    {this.state.isSubmited
-                      ? "Thank you"
-                      : this.state.isSubmitting
-                      ? "Sending....."
-                      : "Join"}
-                  </span>
-                </button>
-              </div>
+  return (
+    <Wrapper>
+      <div className="container">
+        <h2 className="desktop">JOIN US, IN CHANGING THE FUTURE</h2>
+        <h2 className="mobile">
+          JOIN US
+          <br />
+          <span className="in-change">IN CHANGE THE FUTURE</span>
+        </h2>
+        <p className="text">
+          Become an insider, win trips & access exclusive early memberdiscounts.
+        </p>
+        <form onSubmit={handleSubmit} className="form">
+          <div className="input-group">
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              className="form-control"
+              placeholder="example@ableaura.com"
+              required
+            />
+            <div className="container-join-btn">
+              <button
+                type="submit"
+                disabled={isSubmited || isSubmitting}
+                id="btn-join"
+                className="btn btn-join"
+                style={{
+                  backgroundColor: isSubmited ? "green" : "black",
+                }}
+              >
+                <StaticImage
+                  src="../../assets/images/hand-white-01.png"
+                  alt="hand"
+                  layout="fixed"
+                  width={20}
+                  height={20}
+                />
+                <span className="text">
+                  {isSubmited
+                    ? "Thank you"
+                    : isSubmitting
+                    ? "Sending....."
+                    : "Join"}
+                </span>
+              </button>
             </div>
-          </form>
-        </div>
-      </Wrapper>
-    );
-  }
-}
+          </div>
+        </form>
+      </div>
+    </Wrapper>
+  );
+};
 
 export default BecomeInsider;
 
